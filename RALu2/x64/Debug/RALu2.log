@@ -1,5 +1,0 @@
-﻿  main.cpp
-C:\Users\matej\source\repos\NTL\WinNTL\include\NTL\lip.h(399,40): warning C4146: unary minus operator applied to unsigned type, result still unsigned
-C:\Users\matej\source\repos\RALu2\RALu2\main.cpp(123,22): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
-C:\Users\matej\source\repos\RALu2\RALu2\main.h(21): warning C4715: 'calculate': not all control paths return a value
-  RALu2.vcxproj -> C:\Users\matej\source\repos\RALu2\x64\Debug\RALu2.exe
