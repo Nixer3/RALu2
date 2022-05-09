@@ -1,6 +1,6 @@
 ﻿/*
-Zadanie RAL 2021
-Veronika Paulinyová a Sabina Daniela Pekareková
+Zadanie RAL 2022
+Stanislava Peckova a Matej Skulsky
 
 text zadania:
 2. Aritmetika  modulo 2^n, t.j. určenie polynómu rozšírenia poľa, potom súčet, súčin, inverzia - 2 ľudia
@@ -51,11 +51,11 @@ int main() {
     long n;
     cout << "Vitajte v interaktivnej kalkulacke v poliach F2^n." << endl;
     cout << "Zadajte n." << endl; //stupen polynomu
-    //cin >> n; 
-    n = 111;
+    cin >> n; 
+    
     GF2X modul;
     BuildIrred(modul, n);
-  //  cout << "Polynom na faktorizaciu F2^" << n << " je: " << modul << endl;
+    cout << "Polynom na faktorizaciu F2^" << n << " je: " << modul << endl;
     GF2E::init(modul);
 
 
@@ -73,29 +73,27 @@ int main() {
 
     //NOT TESTED ALL EDGE CASES  or (supposed) crashed when line doesn't make sense
 
-    string input = "([0 0 1]*[1])([1]+[0])*[1 0 0 1]";
-    try {
-        cout << evaluate(input) << endl;
-    }
-    catch (string e) {
-        cout << "gone wrong" << endl;
-        cout << e << endl;
-    }
+   
 
-    return 0;
-    while (0) {
-
-        GF2E poly;
-
+    
+    while (1) {
         string l;
-        getline(cin,l); // read whole line
-        trim(l);  // cut white spaces from ends
-        stringstream line(l);
-        
-        int num = 0;
-        
-
-
+        getline(cin, l); // read whole line
+        if (!l.empty()) {
+            cout << l << endl;
+            trim(l);  // cut white spaces from ends
+            cout << evaluate(l) <<endl;
+            char control;
+            cout << "Pre ukoncenie stlacte Q. Ak chcete pokracovat stlacte lubovolnu klavesu" << endl;
+            control = getchar();
+            if (control == 'q' || control == 'Q') {
+                exit(0);
+            }
+        }
+        else {
+            cout << "Zadajte rovnicu na pocitanie" << endl;
+        }
+       
     }
     return 0;
 }
