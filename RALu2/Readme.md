@@ -1,8 +1,8 @@
-﻿##RAL zadanie
+﻿## RAL zadanie
 
-##### Úloha 2: Aritmetika  modulo 2n, t.j. určenie polynómu rozšírenia poľa, potom súčet, súčin, inverzia
+#### Úloha 2: Aritmetika  modulo 2n, t.j. určenie polynómu rozšírenia poľa, potom súčet, súčin, inverzia
 
-###### Podporované operácie:
+##### Podporované operácie:
 
 zátvorky ()
 Dva operandy
