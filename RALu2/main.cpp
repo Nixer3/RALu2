@@ -49,12 +49,15 @@ int8_t prio(char c) {
 int main() {
 
     long n;
+    cout << "***************************************************" << endl;
     cout << "Vitajte v interaktivnej kalkulacke v poliach F2^n." << endl;
+    cout << "***************************************************" << endl;
     cout << "Zadajte n." << endl; //stupen polynomu
     cin >> n; 
     
     GF2X modul;
     BuildIrred(modul, n);
+    cout << "***************************************************" << endl;
     cout << "Polynom na faktorizaciu F2^" << n << " je: " << modul << endl;
     GF2E::init(modul);
 
@@ -73,8 +76,6 @@ int main() {
 
     //NOT TESTED ALL EDGE CASES  or (supposed) crashed when line doesn't make sense
 
-   
-
     
     while (1) {
         string l;
@@ -83,6 +84,7 @@ int main() {
             cout << l << endl;
             trim(l);  // cut white spaces from ends
             cout << evaluate(l) <<endl;
+            cout << "***************************************************" << endl;
             char control;
             cout << "Pre ukoncenie stlacte Q. Ak chcete pokracovat stlacte lubovolnu klavesu" << endl;
             control = getchar();
@@ -91,6 +93,15 @@ int main() {
             }
         }
         else {
+            cout << "***************************************************" << endl;
+            cout << "Navod na zadavanie polynomov" << endl;
+            cout << "ax^0 bx^1 cx^2 dx^3 == [a b c d]" << endl;
+            cout << "Operandy:  +   -   *   /" << endl;
+            cout << "Exponent: e alebo ^" << endl;
+            cout << "Inverzia: i" << endl;
+            cout << "Stopa (trace): t" << endl;
+            cout << "Stvorcova matica (square): s" << endl;
+            cout << "***************************************************" << endl;
             cout << "Zadajte rovnicu na pocitanie" << endl;
         }
        
